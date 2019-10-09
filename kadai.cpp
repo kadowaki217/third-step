@@ -1,4 +1,5 @@
 #include<iostream>
+#include<algorithm>
 
 using namespace std;
 
@@ -31,6 +32,19 @@ int main(){
 	for(int i = 0; i < 20; ++i){
 		printf("生徒%d\t理科:%.3f\t英語:%.3f\n", i+1, scidev[i], engdev[i]);
 	}
+
+	sort(sci, sci+20, greater<double>());
+	sort(eng, eng+20, greater<double>());
+	
+	printf("\n理科:\n");
+	for(int i = 0; i < 20; ++i){
+		printf("%.3f\t", sci[i]);
+	}
+	printf("\n英語:\n");
+	for(int i = 0; i < 20; ++i){
+		printf("%.3f\t", eng[i]);
+	}
+	printf("\n");
 
 	return 0;
 }
