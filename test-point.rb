@@ -35,15 +35,13 @@ print("\n\n")
 print("偏差値\n")
 print("-----science-----\n")
 for s in science do
-	print 10 * (s - science.mean) / science.sd + 50
-	print ("\n")
+	print 10 * (s - science.mean) / science.sd + 50,"\n"
 end
 print("\n")
 
 print("-----english-----\n")
 for e in english do
-	print 10 * (e - english.mean) / english.sd + 50
-	print ("\n")
+	print 10 * (e - english.mean) / english.sd + 50,"\n"
 end
 print("\n")
 
