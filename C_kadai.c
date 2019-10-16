@@ -5,6 +5,8 @@ int main()
 {
  int science[20]={65,80,67,35,58,60,72,75,68,92,36,50,2,58.5,46,42,78,62,84,70};
  int english[20]={44,87,100,63,52,60,58,73,55,86,29,56,89,23,65,84,64,27,86,84};
+ int s_sort[20]={65,80,67,35,58,60,72,75,68,92,36,50,2,58.5,46,42,78,62,84,70};
+ int e_sort[20]={44,87,100,63,52,60,58,73,55,86,29,56,89,23,65,84,64,27,86,84};
  double s_sum=0.0,e_sum=0.0;
  double s_dev=0.0,e_dev=0.0;
  double s_ave,e_ave;
@@ -44,18 +46,18 @@ int main()
  {
   for(j=i+1;j<20;j++)
   {
-	if(science[i]<science[j])
+	if(s_sort[i]<s_sort[j])
 	{
-	 tmp=science[i];
-	 science[i]=science[j];
-	 science[j]=tmp;
+	 tmp=s_sort[i];
+	 s_sort[i]=s_sort[j];
+	 s_sort[j]=tmp;
 	}
 
-	if(english[i]<english[j])
+	if(e_sort[i]<e_sort[j])
         {
-         tmp2=english[i];
-         english[i]=english[j];
-         english[j]=tmp2;
+         tmp2=e_sort[i];
+         e_sort[i]=e_sort[j];
+         e_sort[j]=tmp2;
         }
   }
  }
@@ -63,13 +65,13 @@ int main()
  printf("理科 高い順\n");
  for(i=0;i<20;i++)
  {
-  printf("%d ",science[i]);
+  printf("%d ",s_sort[i]);
  }
 
  printf("\n英語 高い順\n");
  for(i=0;i<20;i++)
  {
-  printf("%d ",english[i]);
+  printf("%d ",e_sort[i]);
  }
  printf("\n");
 
